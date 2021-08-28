@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } fr
 import { Item } from './item.entity';
 import { ItemService } from './item.service';
 
-@Controller('item')
+@Controller('items')
 export class ItemController {
     constructor(private itemService : ItemService) {}
 

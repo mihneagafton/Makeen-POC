@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
 import { Collection } from '../collections/collection.entity';
+import { Group } from '../groups/group.entity';
 import { Item } from '../items/item.entity';
 
 export const databaseProviders = [
@@ -14,7 +15,7 @@ export const databaseProviders = [
         password: 'password',
         database: 'postgres',
       });
-      sequelize.addModels([Collection, Item]);
+      sequelize.addModels([Collection, Item, Group]);
       await sequelize.sync();
       return sequelize;
     },
