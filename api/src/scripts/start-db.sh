@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-SERVER="postgres_server";
+SERVER="my_postgres_srv";
 PW="password";
-DB="postgres_database";
+DB="my_postgres_db";
 
 echo "echo stop & remove old docker [$SERVER] and starting new fresh instance of [$SERVER]"
 (docker kill $SERVER || :) && \
