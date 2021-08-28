@@ -1,4 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
+import { Item } from '../items/item.entity';
 import { Collection } from './collection.entity';
 
 @Injectable()
@@ -13,7 +14,11 @@ export class CollectionService {
   }
   
   async findAll(): Promise<Collection[]> {
-    return await this.collectionsRepository.findAll<Collection>();
+    return await this.collectionsRepository.findAll<Collection>({
+      include: [{
+        model: Item
+      }]
+    });
   }
 
   async findById(id: number): Promise<Collection> {
