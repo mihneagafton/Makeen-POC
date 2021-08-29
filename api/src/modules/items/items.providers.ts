@@ -1,4 +1,4 @@
-import { Item } from './item.entity';
+import { Item } from 'src/modules/items/item.entity';
 
 export const itemsProviders = [
   {

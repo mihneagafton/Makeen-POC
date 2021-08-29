@@ -1,4 +1,4 @@
-import { RolesUsers } from './roles-users.entity';
+import { RolesUsers } from 'src/modules/users/roles-users.entity';
 
 export const rolesUsersProviders = [
   {

@@ -1,5 +1,5 @@
 import { Table, Column, Model, BelongsTo, ForeignKey } from 'sequelize-typescript';
-import { Collection } from '../collections/collection.entity';
+import { Collection } from 'src/modules/collections/collection.entity';
 
 @Table
 export class Item extends Model<Item> {

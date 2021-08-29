@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { GroupService } from './group.service';
-import { GroupController } from './group.controller';
-import { groupsProviders } from './groups.providers';
-import { DatabaseModule } from '../database/database.module';
+import { GroupService } from 'src/modules/groups/group.service';
+import { GroupController } from 'src/modules/groups/group.controller';
+import { groupsProviders } from 'src/modules/groups/groups.providers';
+import { DatabaseModule } from 'src/modules/database/database.module';
 
 @Module({
   imports: [DatabaseModule],

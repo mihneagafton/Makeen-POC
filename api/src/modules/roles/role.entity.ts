@@ -1,7 +1,7 @@
 import { Table, Column, Model, BelongsTo, ForeignKey, BelongsToMany } from 'sequelize-typescript';
-import { Group } from '../groups/group.entity';
-import { User } from '../users/user.entity';
-import { RolesUsers } from '../users/roles-users.entity';
+import { Group } from 'src/modules/groups/group.entity';
+import { User } from 'src/modules/users/user.entity';
+import { RolesUsers } from 'src/modules/users/roles-users.entity';
 
 type RoleStatus = 'regular'|'manager'|'globalManager';
 

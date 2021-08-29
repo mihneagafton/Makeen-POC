@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from '@nestjs/common';
-import { RolesUsers } from './roles-users.entity';
-import { User } from './user.entity';
-import { UserService } from './user.service';
+import { RolesUsers } from 'src/modules/users/roles-users.entity';
+import { User } from 'src/modules/users/user.entity';
+import { UserService } from 'src/modules/users/user.service';
 
 @Controller('users')
 export class UserController {

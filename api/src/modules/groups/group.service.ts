@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { Collection } from '../collections/collection.entity';
-import { Item } from '../items/item.entity';
-import { Group } from './group.entity';
+import { Collection } from 'src/modules/collections/collection.entity';
+import { Item } from 'src/modules/items/item.entity';
+import { Group } from 'src/modules/groups/group.entity';
 
 @Injectable()
 export class GroupService {

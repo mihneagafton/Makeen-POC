@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from '@nestjs/common';
-import { Collection } from './collection.entity';
-import { CollectionService } from './collection.service';
+import { Collection } from 'src/modules/collections/collection.entity';
+import { CollectionService } from 'src/modules/collections/collection.service';
 
 @Controller('collections')
 export class CollectionController {

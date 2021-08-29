@@ -1,6 +1,6 @@
 import { Column, HasMany, Table, Model, BelongsToMany } from "sequelize-typescript";
-import { Role } from "../roles/role.entity";
-import { RolesUsers } from "./roles-users.entity";
+import { Role } from "src/modules/roles/role.entity";
+import { RolesUsers } from "src/modules/users/roles-users.entity";
 
 
 @Table

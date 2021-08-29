@@ -1,4 +1,4 @@
-import { Group } from './group.entity';
+import { Group } from 'src/modules/groups/group.entity';
 
 export const groupsProviders = [
   {

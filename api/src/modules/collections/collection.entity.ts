@@ -1,6 +1,6 @@
 import { Table, Column, Model, HasMany, BelongsTo, ForeignKey } from 'sequelize-typescript';
-import { Group } from '../groups/group.entity';
-import { Item } from '../items/item.entity';
+import { Group } from 'src/modules/groups/group.entity';
+import { Item } from 'src/modules/items/item.entity';
 
 @Table
 export class Collection extends Model<Collection> {

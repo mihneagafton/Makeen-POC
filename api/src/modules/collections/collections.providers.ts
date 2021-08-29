@@ -1,4 +1,4 @@
-import { Collection } from './collection.entity';
+import { Collection } from 'src/modules/collections/collection.entity';
 
 export const collectionsProviders = [
   {

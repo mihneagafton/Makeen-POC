@@ -1,10 +1,10 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Collection } from '../collections/collection.entity';
-import { Group } from '../groups/group.entity';
-import { Item } from '../items/item.entity';
-import { Role } from '../roles/role.entity';
-import { RolesUsers } from '../users/roles-users.entity';
-import { User } from '../users/user.entity';
+import { Collection } from 'src/modules/collections/collection.entity';
+import { Group } from 'src/modules/groups/group.entity';
+import { Item } from 'src/modules/items/item.entity';
+import { Role } from 'src/modules/roles/role.entity';
+import { RolesUsers } from 'src/modules/users/roles-users.entity';
+import { User } from 'src/modules/users/user.entity';
 
 export const databaseProviders = [
   {

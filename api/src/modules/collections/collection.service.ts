@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { Item } from '../items/item.entity';
-import { Collection } from './collection.entity';
+import { Item } from 'src/modules/items/item.entity'; 
+import { Collection } from 'src/modules/collections/collection.entity';
 
 @Injectable()
 export class CollectionService {
