@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } fr
 import { Collection } from './collection.entity';
 import { CollectionService } from './collection.service';
 
-@Controller('collection')
+@Controller('collections')
 export class CollectionController {
     constructor(private collectionService : CollectionService) {}
 
@@ -22,8 +22,8 @@ export class CollectionController {
     }
 
     @Put(':id')
-    async update(@Param('id') id: number, @Body() Collection: Collection): Promise<Collection> {
-        const { numberOfAffectedRows, updatedCollection } = await this.collectionService.update(id, Collection);
+    async update(@Param('id') id: number, @Body() collection: Collection): Promise<Collection> {
+        const { numberOfAffectedRows, updatedCollection } = await this.collectionService.update(id, collection);
 
         if (numberOfAffectedRows === 0) {
             throw new NotFoundException('This Collection doesn\'t exist');
