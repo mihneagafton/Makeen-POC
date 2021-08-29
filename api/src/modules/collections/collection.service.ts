@@ -22,7 +22,11 @@ export class CollectionService {
   }
 
   async findById(id: number): Promise<Collection> {
-    return await this.collectionsRepository.findByPk<Collection>(id);
+    return await this.collectionsRepository.findByPk<Collection>(id, {
+      include: [{
+        model: Item
+      }]
+    });
   }
 
   async update(id: number, collection: Collection) {

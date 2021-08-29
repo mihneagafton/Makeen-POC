@@ -26,7 +26,14 @@ export class GroupService {
   }
 
   async findById(id: number): Promise<Group> {
-    return await this.groupsRepository.findByPk<Group>(id);
+    return await this.groupsRepository.findByPk<Group>(id, {
+        include: [{
+          model: Collection,
+          include: [{
+              model: Item
+          }]
+        }]
+      });
   }
 
   async update(id: number, group: Group) {

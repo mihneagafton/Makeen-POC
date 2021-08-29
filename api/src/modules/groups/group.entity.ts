@@ -1,5 +1,6 @@
-import { Table, Column, Model,  HasMany, ForeignKey } from 'sequelize-typescript';
+import { Table, Column, Model,  HasMany} from 'sequelize-typescript';
 import { Collection } from '../collections/collection.entity';
+import { Role } from '../roles/role.entity';
 
 @Table
 export class Group extends Model<Group> {
@@ -10,4 +11,7 @@ export class Group extends Model<Group> {
 
     @HasMany(() => Collection)
     collections: Collection[];
+
+    @HasMany(() => Role)
+    roles: Role[];
 }
