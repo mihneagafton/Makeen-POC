@@ -12,11 +12,11 @@ export const databaseProviders = [
     useFactory: async () => {
       const sequelize = new Sequelize({
         dialect: 'postgres',
-        host: 'localhost',
-        port: 5432,
-        username: 'postgres',
-        password: 'password',
-        database: 'postgres',
+        host: process.env.POSTGRES_HOST,
+        port: parseInt(<string>process.env.POSTGRES_PORT),
+        username: process.env.POSTGRES_USER,
+        password: process.env.POSTGRES_PASSWORD,
+        database: process.env.POSTGRES_DATABASE,
       });
       sequelize.addModels([RolesUsers, User, Item, Collection, Group, Role]);
       await sequelize.sync();

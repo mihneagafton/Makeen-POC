@@ -1,4 +1,5 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from '@nestjs/common';
+import { Public } from 'src/modules/auth/public.decorator';
 import { RolesUsers } from 'src/modules/users/roles-users.entity';
 import { User } from 'src/modules/users/user.entity';
 import { UserService } from 'src/modules/users/user.service';
@@ -7,11 +8,13 @@ import { UserService } from 'src/modules/users/user.service';
 export class UserController {
     constructor(private userService : UserService) {}
 
+    @Public()
     @Post()
     async create(@Body() user: User): Promise<User> {
         return await this.userService.create(user)
     }
 
+    @Public()
     @Get()
     async findAll(): Promise<User[]> {
         return await this.userService.findAll();

@@ -8,6 +8,7 @@ import { ItemsModule } from 'src/modules/items/items.module';
 import { GroupsModule } from 'src/modules/groups/groups.module';
 import { RolesModule } from 'src/modules/roles/roles.module';
 import { UsersModule } from 'src/modules/users/users.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { UsersModule } from 'src/modules/users/users.module';
     GroupsModule,
     RolesModule,
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

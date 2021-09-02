@@ -12,6 +12,7 @@ import { rolesUsersProviders } from 'src/modules/users/roles-users.providers';
     ...usersProviders,
     ...rolesUsersProviders
   ],
-  controllers: [UserController]
+  controllers: [UserController],
+  exports: [UserService]
 })
 export class UsersModule {}
